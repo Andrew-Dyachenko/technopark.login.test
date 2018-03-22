@@ -1,0 +1,45 @@
+@import 'configs/_config'
+@import 'functions/_functions'
+@import 'mixins/_reboot'
+@import 'mixins/_placeholder'
+@import '~normalize.css'
+
+html
+	font-size: $fz-root
+	height: 100%
+
+body
+	font-family: 'Roboto', sans-serif
+	position: relative
+	color: $body-color
+	font-size: .875rem
+	background-color: $body-bg
+	background-image: url(../images/bg-pattern.png)
+	background-position: 0 0
+	background-repeat: repeat
+	height: 100%
+
+*
+	box-sizing: border-box
+
+input
+	+placeholder(lighten(lighten($black, $fibo-asymp-xxxl-percentage), $fibo-asymp-xl-percentage + $fibo-asymp-l-percentage))
+	padding: 3px 11px
+	height: 34px
+	border-radius: 5px
+	border: 1px solid lighten(lighten($black, $fibo-asymp-xxxl-percentage), $fibo-asymp-xl-percentage + $fibo-asymp-l-percentage)
+
+.row
+	&:not(:empty)
+		margin: 0 -8px
+
+[class^='col-']
+	float: left
+	padding: 0 8px
+
+.authorization
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
