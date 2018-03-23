@@ -1,0 +1,87 @@
+.authorization
+	$auth: &
+
+	&__align
+		display: flex
+		height: 100%
+		justify-content: center
+		align-items: center
+
+	&__header
+		margin-bottom: 15px
+
+	&__user
+		display: flex
+		justify-content: center
+		align-items: center
+		overflow: hidden
+		margin: 0 auto
+		width: 57px
+		height: 57px
+		border-radius: 50%
+		box-shadow: 0 1px 0 $white, inset 0 1px 0 fade-out($black, .8), 0 0 5px fade-out($white, .65), inset 0 0 5px fade-out($black, .92)
+		background-color: darken($white, $fibo-asymp-l-percentage)
+		background-image: url(../images/person.png)
+		background-position: 0 0
+		background-repeat: no-repeat
+
+		img
+			display: block
+			margin: 0 auto
+
+	&__form-group
+		position: relative
+
+		&~&
+			margin-top: 12px
+
+	&__form-control
+		position: relative
+		display: block
+		width: 100%
+
+	&__form-label
+		position: absolute
+		z-index: 1
+		top: 1px
+		left: 1px
+		bottom: 1px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: darken($white, $fibo-asymp-l-percentage)
+		border-right: 1px solid $grey-2
+		border-radius: 3px 0 0 3px
+		width: 31px
+
+		& ~ #{$auth}
+			&__form-extractor
+				#{$auth}__form-control
+					padding-left: 43px
+
+	&__caret
+		position: absolute
+		left: 100%
+		top: 50%
+		transform: translateY(-50%)
+		width: 0
+		height: 0
+		border-left: 6px solid $grey-2
+		border-top: 5.5px solid transparent
+		border-bottom: 5.5px solid transparent
+
+		&::after
+			content: ''
+			position: absolute
+			left: 100%
+			top: 50%
+			transform: translate(-6px, -50%)
+			width: 0
+			height: 0
+			border-left: 4px solid darken($white, $fibo-asymp-l-percentage)
+			border-top: 3.5px solid transparent
+			border-bottom: 3.5px solid transparent
+
+.modal__inner--authorization
+	.authorization__padding
+		padding: 9px 53px 0

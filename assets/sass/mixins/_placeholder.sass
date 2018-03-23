@@ -1,10 +1,13 @@
-@mixin placeholder($color)
+@mixin placeholder($color, $fs)
 	&::-moz-placeholde
 		color: $color
+		font-size: $fs
 		opacity: 1
 
 	&:-ms-input-placeholder
 		color: $color
+		font-size: $fs
 
 	&::-webkit-input-placeholder
 		color: $color
+		font-size: $fs

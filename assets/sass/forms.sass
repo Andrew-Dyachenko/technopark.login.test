@@ -1,0 +1,26 @@
+$form-control: '[class$='__form-control']'
+	
+[type='text'],
+[type='email'],
+[type='password']
+	+placeholder($grey-3, $fs-base)
+	background-color: $white
+	color: $grey-4
+	border: 1px solid $grey-2
+	border-radius: 3px
+	padding: 4px 11px 5px
+	font-size: $fs-base
+	font-weight: 400
+	line-height: 1
+	letter-spacing: .28px
+	height: 30px
+
+[class$='__form-group--success']
+	#{$form-control}
+		border-color: $success
+		box-shadow: 0 0 3px fade-out($success, .6)
+
+[class$='__form-group--error']
+	#{$form-control}
+		border-color: $error
+		box-shadow: 0 0 3px fade-out($error, .6)

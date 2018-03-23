@@ -1,0 +1,29 @@
+block authorization
+    .authorization#authorization
+        .authorization__padding
+            .authorization__header
+                .authorization__user
+
+            form.authorization__form
+                .authorization__form-group
+                    label.authorization__form-label.sprite-smith(for='login-email')
+                        span.authorization__caret
+                        span.icon-person--small
+
+                    .authorization__form-extractor
+                        input#login-email.authorization__form-control(type='email' placeholder='chavroka@gmail.com')
+
+                .authorization__form-group
+                    label.authorization__form-label.sprite-smith(for='login-password')
+                        span.authorization__caret
+                        span.icon-key
+
+                    .authorization__form-extractor
+                        input#login-password.authorization__form-control(type='password')
+
+                .authorization__form-group
+                    input#login-remember.authorization__form-control(type='checkbox')
+                    label(for='login-remember')
+
+                .authorization__form-group
+                    a(href='javascript: void(0);')

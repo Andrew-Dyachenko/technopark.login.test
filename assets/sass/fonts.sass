@@ -11,3 +11,16 @@ $font-path: '../../fonts/Roboto/'
 +font-face($font-name, '#{$font-path}RobotoLight',   normal, 300)
 +font-face($font-name, '#{$font-path}RobotoRegular', normal, normal)
 +font-face($font-name, '#{$font-path}RobotoBold',    normal, bold)
+
+// ----------  Custom font  ----------
+
+@import 'utilities/_custom-font'
+
+// ----------  Font icon  ----------
+
+[class*='custom-font-']
+	display: inline-block
+	line-height: 1
+
+	&:before
+		display: block

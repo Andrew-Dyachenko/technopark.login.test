@@ -1,29 +1,12 @@
 'use strict';
 
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import App from '../components/App';
-
-Vue.use(VueRouter);
-
-const Home = { template: App };
-const NotFound = { template: 'Страница не найдена' };
-
-const Routes = [
-    { path: '/', component: Home },
-    { path: '/pages/', component: Home },
-    { path: '/pages/index.html', component: Home }
-];
-
-const Router = new VueRouter({
-    Routes
-});
+import Auth from 'authorization';
 
 document.addEventListener('DOMContentLoaded', () => {
-    new Vue({
-        el: '#app',
-        router: Router
-        // template: '<App/>',
-        // components: { App }
+    new Auth({
+        login: document.getElementById('login-email'),
+        password: document.getElementById('login-password'),
+        remember: document.getElementById('login-remember'),
+        submit: document.getElementById('login-submit')
     });
 });
