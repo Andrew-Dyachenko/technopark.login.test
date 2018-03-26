@@ -14,7 +14,7 @@ block authorization
                         input#login-email.authorization__form-control(type='email' placeholder='chavroka@gmail.com' required)
 
                 .authorization__form-group
-                    label.authorization__form-label.sprite-smith(for='login-password' minlength='5' required)
+                    label.authorization__form-label.sprite-smith(for='login-password')
                         span.authorization__caret
                         span.icon-key
 
@@ -39,3 +39,7 @@ block authorization
 
                     .authorization__form-group.authorization__form-group--submit
                         button#login-submit.authorization__submit(type='submit') Sign In
+
+        .authorization__abroad
+            span Not a registered user yet?
+            a(href='#') Sign up now!

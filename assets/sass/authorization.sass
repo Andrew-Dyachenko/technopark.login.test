@@ -150,6 +150,26 @@
 		display: block
 		width: 100%
 
+	&__abroad
+		text-align: center
+		color: $grey-4
+		font-size: 12px
+		font-weight: 400
+		line-height: 17px
+		letter-spacing: .24px
+
+		a
+			color: $success-3
+			letter-spacing: .24px
+
+		&:not(:empty)
+			margin: 0 $gutter-width / -4 -46px
+			padding-top: 28px
+
+		> *
+			&:not(script)
+				margin: 0 $gutter-width / 4
+
 .modal__inner--authorization
 	.authorization__padding
 		$ph: 53px

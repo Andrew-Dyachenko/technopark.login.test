@@ -45,7 +45,7 @@ var mode = 'dev',
 	FAVICON_DATA_FILE = 'faviconData.json', // Список разположений всех генерируемых файлов - фавиконов | List of the locations of all the generated files - favicon
 	configs = {},
 	prodList = [cleanBase, 'favicon', templates, htmlBeautify, htmlLint, 'iconFontGroup', 'sassGroup', 'jsGroup', imageMin, 'copy', banner, server, watch, faviconUpdate],
-	fastList = [cleanBase, templates, htmlBeautify, htmlLint, 'iconFontGroup', 'sassGroup', 'jsGroup', imageMin, 'copy', server, watch],
+	fastList = [cleanBase, templates, htmlBeautify, htmlLint, 'iconFontGroup', 'sassGroup', 'jsGroup', imageMin, 'copy', banner, server, watch],
 	plugins = gulpLoadPlugins({
 		rename: {
 			'gulp-uglify-es':          'uglify',
