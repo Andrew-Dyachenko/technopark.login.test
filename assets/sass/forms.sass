@@ -3,10 +3,10 @@ $form-control: '[class$='__form-control']'
 [type='text'],
 [type='email'],
 [type='password']
-	+placeholder($grey-3, $fs-base)
+	+placeholder($grey-4, $fs-base)
 	background-color: $white
-	color: $grey-4
-	border: 1px solid $grey-2
+	color: $grey-5
+	border: 1px solid $grey-3
 	border-radius: 3px
 	padding: 4px 11px 5px
 	font-size: $fs-base
@@ -14,13 +14,96 @@ $form-control: '[class$='__form-control']'
 	line-height: 1
 	letter-spacing: .28px
 	height: 30px
+	outline-color: $blue
 
 [class$='__form-group--success']
 	#{$form-control}
-		border-color: $success
-		box-shadow: 0 0 3px fade-out($success, .6)
+		border-color: $success-2
+		outline-color: $success-2
+		box-shadow: 0 0 3px fade-out($success-2, .6)
 
 [class$='__form-group--error']
 	#{$form-control}
 		border-color: $error
+		outline-color: $error
 		box-shadow: 0 0 3px fade-out($error, .6)
+
+.swiper
+	$swiper: &
+	font-size: 0
+	letter-spacing: 0
+	line-height: 0
+	display: flex
+	align-items: center
+	margin: 0 $gutter-width / -4
+
+	> *
+		&:not(script)
+			padding: 0 $gutter-width / 4
+
+	&__pre
+		$pre: &
+		order: 1
+		font-size: 8px
+		letter-spacing: normal
+		color: $grey-2
+
+		&-icon
+			display: block
+			margin: 0 auto
+			letter-spacing: 0
+			min-width: 10px
+
+			&--tick
+				display: none
+
+	&__toggler
+		position: relative
+		transition: background-color .1s ease-in-out
+		order: 3
+		width: 40px
+		height: 14px
+		border-radius: 7px
+		box-shadow: 1px 1px 1px $white, inset 1px 1px 2px fade-out($black, .65), inset 0 0 5px fade-out($black, .99)
+		background-color: $error
+		background-image: linear-gradient(to top, fade-out($white, .82) 0%, fade-out($black, .82) 100%)
+
+	&__post
+		order: 4
+		color: $grey-4
+		font-size: 12px
+		font-weight: 400
+		line-height: .01px
+		letter-spacing: .24px
+
+	&__dog
+		transition: left .1s ease-in-out
+		transform: translate(-1px, -1px)
+		position: absolute
+		width: 16px
+		height: 16px
+		left: 0
+		top: 0
+		border-radius: 50%
+		box-shadow: 1px 1px 3px fade-out($black, .75), inset 0 1px 0 fade-out($black, .9)
+		background-color: $grey-1
+		background-image: linear-gradient(to top, fade-out($black, .75) 0%, fade-out($white, .9) 100%)
+
+	&__checkbox
+		order: 2
+		display: none
+
+		&:checked
+			& ~ #{$swiper}__toggler
+				background-color: $success-1
+
+				#{$swiper}__dog
+					left: calc(100% - 14px)
+
+			& ~ #{$swiper}__pre
+				#{$swiper}__pre-icon
+					&--cross
+						display: none
+
+					&--tick
+						display: block

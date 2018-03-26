@@ -11,19 +11,31 @@ block authorization
                         span.icon-person--small
 
                     .authorization__form-extractor
-                        input#login-email.authorization__form-control(type='email' placeholder='chavroka@gmail.com')
+                        input#login-email.authorization__form-control(type='email' placeholder='chavroka@gmail.com' required)
 
                 .authorization__form-group
-                    label.authorization__form-label.sprite-smith(for='login-password')
+                    label.authorization__form-label.sprite-smith(for='login-password' minlength='5' required)
                         span.authorization__caret
                         span.icon-key
 
                     .authorization__form-extractor
-                        input#login-password.authorization__form-control(type='password')
+                        input#login-password.authorization__form-control(type='password' placeholder='*********' minlength='5' required)
 
-                .authorization__form-group
-                    input#login-remember.authorization__form-control(type='checkbox')
-                    label(for='login-remember')
+                .authorization__form-group.authorization__form-group--forget
+                    a.authorization__forget-link(href='javascript: void(0);') Forgot your password?
+                
+                .authorization__form-group.authorization__form-group--actions
+                    .authorization__form-group.authorization__form-group--remember
+                        .swiper.authorization__swiper
+                            input#login-remember.swiper__checkbox(type='checkbox' checked)
+                            label(for='login-remember').swiper__pre.sprite-smith
+                                span.icon-tick.swiper__pre-icon.swiper__pre-icon--tick
+                                span.icon-cross.swiper__pre-icon.swiper__pre-icon--cross
 
-                .authorization__form-group
-                    a(href='javascript: void(0);')
+                            label(for='login-remember').swiper__toggler
+                                span.swiper__dog
+
+                            label(for='login-remember').swiper__post Remember?
+
+                    .authorization__form-group.authorization__form-group--submit
+                        button#login-submit.authorization__submit(type='submit') Sign In

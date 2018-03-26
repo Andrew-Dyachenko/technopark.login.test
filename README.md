@@ -11,7 +11,7 @@ $ cd /var/www/
 ```
 Склонируйте проект, введя в терминал команду (SSH KEY не потребуется - проект публичный)
 ```
-$ git clone git@bitbucket.org:Andrew_Dyachenko/deep.social.test.git
+$ git clone git@bitbucket.org:Andrew_Dyachenko/technopark.login.test.git
 ```
 <i class="icon-clock"></i> Дождитесь окончания процесса клонирования
 
@@ -23,11 +23,11 @@ $ git clone git@bitbucket.org:Andrew_Dyachenko/deep.social.test.git
 #### <i class="icon-upload"></i> Развертка проекта
 Перейдите в главную папку склонированного проекта
 ```
-$ cd /var/www/deep.social.test/
+$ cd /var/www/technopark.login.test/
 ```
 Разверните рабочий каталог
 ```
-~/deep.social.test$ npm install
+~/technopark.login.test$ npm install
 ```
 <i class="icon-clock"></i> Дождитесь окончания установки
 
@@ -38,9 +38,9 @@ $ cd /var/www/deep.social.test/
 #### <i class="icon-cog-alt"></i> Сборка проекта
 Для первого запуска сборки проекта используйте команду
 ```
-~/deep.social.test$ gulp
+~/technopark.login.test$ gulp
 ```
 Для всех последующих dev сборок можно использовать более быстрый интерфейс
 ```
-~/deep.social.test$ gulp fast
+~/technopark.login.test$ gulp fast
 ```

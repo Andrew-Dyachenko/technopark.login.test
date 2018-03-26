@@ -30,15 +30,63 @@
 			margin: 0 auto
 
 	&__form-group
+		$form-group: &
 		position: relative
 
-		&~&
+		& ~ &
 			margin-top: 12px
 
+			&--forget
+				margin-top: 3px
+
+			&--actions
+				margin-top: 18px
+
+		&--actions
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			flex-direction: column
+
+			&:not(:empty)
+				margin-bottom: $gutter-width / -4
+				margin-left: $gutter-width / -2
+				margin-right: $gutter-width / -2
+				margin-top: 14px
+
+			> *
+				&:not(script)
+					flex-grow: 1
+					padding: 0 $gutter-width / 2
+					margin: $gutter-width / 2 0
+
+			#{$auth}__form-group
+				margin: $gutter-width / 4 0
+
+			@media (min-width: #{350px + $gutter-width})
+				flex-direction: row
+
+		&--remember
+			display: flex
+			align-items: center
+
+			@media (min-width: #{350px + $gutter-width})
+				& ~ #{$form-group}
+					flex-grow: 0
+
+		&--submit
+			width: 100%
+
+			@media (min-width: #{350px + $gutter-width})
+				width: auto
+
 	&__form-control
-		position: relative
 		display: block
 		width: 100%
+
+		&[type='checkbox']
+			width: auto
 
 	&__form-label
 		position: absolute
@@ -50,7 +98,7 @@
 		justify-content: center
 		align-items: center
 		background-color: darken($white, $fibo-asymp-l-percentage)
-		border-right: 1px solid $grey-2
+		border-right: 1px solid $grey-3
 		border-radius: 3px 0 0 3px
 		width: 31px
 
@@ -66,7 +114,7 @@
 		transform: translateY(-50%)
 		width: 0
 		height: 0
-		border-left: 6px solid $grey-2
+		border-left: 6px solid $grey-3
 		border-top: 5.5px solid transparent
 		border-bottom: 5.5px solid transparent
 
@@ -82,6 +130,35 @@
 			border-top: 3.5px solid transparent
 			border-bottom: 3.5px solid transparent
 
+	&__forget-link
+		font-size: 12px
+		color: $grey-4
+
+	&__actions
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&:not(:empty)
+			margin: 0 $gutter-width / -2
+		
+		& > *
+			&:not(script)
+				padding: 0 $gutter-width / 2
+
+	&__submit
+		display: block
+		width: 100%
+
 .modal__inner--authorization
 	.authorization__padding
-		padding: 9px 53px 0
+		$ph: 53px
+		$pw: 350px
+		padding-top: 9px
+		padding-bottom: 5px
+
+		@media (min-width: $xxs)
+			padding: 9px calc((#{$xxs} - 100vw - var(--scroll-width)) * (#{number(#{str-replace(#{$ph}, unit($ph), '')})} / #{number(#{str-replace(#{$pw + $gutter-width * 2}, unit($pw), '')}) - number(str-replace(#{$xxs}, unit($xxs), ''))}) * -1) 5px
+
+		@media (min-width: #{$pw + $gutter-width * 2})
+			padding: 9px 53px 14px

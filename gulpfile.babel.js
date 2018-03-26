@@ -44,7 +44,7 @@ gulp.signature = function (date) { // Подпись. | Signature.
 var mode = 'dev',
 	FAVICON_DATA_FILE = 'faviconData.json', // Список разположений всех генерируемых файлов - фавиконов | List of the locations of all the generated files - favicon
 	configs = {},
-	taskList = [cleanBase, 'favicon', templates, htmlBeautify, htmlLint, 'iconFontGroup', 'sassGroup', 'jsGroup', imageMin, 'copy', banner, server, watch, faviconUpdate],
+	prodList = [cleanBase, 'favicon', templates, htmlBeautify, htmlLint, 'iconFontGroup', 'sassGroup', 'jsGroup', imageMin, 'copy', banner, server, watch, faviconUpdate],
 	fastList = [cleanBase, templates, htmlBeautify, htmlLint, 'iconFontGroup', 'sassGroup', 'jsGroup', imageMin, 'copy', server, watch],
 	plugins = gulpLoadPlugins({
 		rename: {
@@ -157,7 +157,8 @@ configs.sass = {
 	dist:   configs.dist    + 'css/',
 	ext:    's+(a|c)ss',
 	files: [
-		'bundle'
+		'bundle',
+		'noscript'
 	],
 	exceptions: [],
 	options: {
@@ -588,7 +589,7 @@ gulp.task('favicon', gulp.series(faviconFile, faviconGenerate, faviconInject, fa
 
 gulp.task('fast', gulp.series(fastList));
 
-gulp.task('default', gulp.series(taskList));
+gulp.task('default', gulp.series(prodList));
 
 /*============================================================*/
 
@@ -854,7 +855,7 @@ function rollupJS() {
 			});
 			return arr;
 		})())
-		.pipe(plugins.cached(configs.js.rollup.cached.name, configs.js.rollup.cached.options))
+		// .pipe(plugins.cached(configs.js.rollup.cached.name, configs.js.rollup.cached.options))
 		.pipe(plugins.debug(configs.js.rollup.debug))
 		.pipe(plugins.sourcemaps.init())
 		.pipe(plugins.rollup({

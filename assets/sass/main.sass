@@ -12,6 +12,7 @@
 @import 'authorization'
 
 html
+	#{--scroll-width}: 0
 	font-size: $fz-root
 	height: 100%
 
@@ -28,3 +29,31 @@ body
 
 *
 	box-sizing: border-box
+
+a
+	text-decoration: none
+	font-weight: 400
+	color: $success-3
+	letter-spacing: .24px
+	opacity: .9
+	text-shadow: 0 1px 0 $white
+
+	&:hover
+		text-decoration: underline
+
+button
+	background-color: $success-2
+	border: 1px solid $success-2
+	border-radius: 3px
+	border-bottom: 2px solid darken($success-2, 7.843137255%)
+	color: $white
+	font-size: .875rem
+	font-weight: 400
+	letter-spacing: .28px
+	outline-color: $blue
+	padding: calc(1em / 4) calc(1em / 2.245) calc(1em / 4 - 1px)
+
+	&:disabled
+		background-color: $grey-3
+		border-color: $grey-3
+		border-bottom-color: darken($grey-3, 7.843137255%)

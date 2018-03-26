@@ -1,0 +1,24 @@
+@import 'configs/_config'
+
+$form-control: '[class$='__form-control']'
+
+#{$form-control}
+	&:invalid
+		border-color: $error
+		outline-color: $error
+		box-shadow: 0 0 3px fade-out($error, .6)
+
+	&:valid
+		border-color: $success-2
+		outline-color: $success-2
+		box-shadow: 0 0 3px fade-out($success-2, .6)
+
+.authorization
+	$auth: &
+	&__form
+		&:invalid
+			#{$auth}__submit
+				pointer-events: none
+				background-color: $grey-3
+				border-color: $grey-3
+				border-bottom-color: darken($grey-3, 7.843137255%)
