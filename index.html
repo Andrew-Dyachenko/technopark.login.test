@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Выполненное тестовое задания от компании Технопарк">
+	<meta name="keywords" content="Тест,Задание,Технопарк">
+	<meta name="author" content="Андрей Дьяченко (HTML / Front-end разработчик), Россия, Москва, Phone: +7 (915) 251-96-66, Email: north.inhale@gmail.com, Telegram: +7 (915) 251-96-66, Skype: tux_will">
+	<meta name="revisit-after" content="1.4 days">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./images/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#f3f5f7">
+	<link rel="shortcut icon" href="./images/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./images/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="./images/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<title>technopark.login.test</title>
+	<link href="./css/bundle.css" rel="stylesheet">
+	<script src="./js/bundle.js" defer></script>
+	<noscript>
+		<link href="./css/noscript.css" rel="stylesheet">
+	</noscript>
+</head>
+
+<body>
+	<div class="technopark index" id="technopark">
+		<div class="modal" id="modal">
+			<div class="modal__padding">
+				<div class="modal__align">
+					<div class="modal__container">
+						<div class="modal__container-padding">
+							<div class="modal__inner modal__inner--authorization">
+								<div class="authorization" id="authorization">
+									<div class="authorization__padding">
+										<div class="authorization__header">
+											<div class="authorization__user"></div>
+										</div>
+										<form class="authorization__form">
+											<div class="authorization__form-group">
+												<label class="authorization__form-label sprite-smith" for="login-email"><span class="authorization__caret"></span><span class="icon-person--small"></span></label>
+												<div class="authorization__form-extractor">
+													<input class="authorization__form-control" id="login-email" type="email" placeholder="chavroka@gmail.com" required>
+												</div>
+											</div>
+											<div class="authorization__form-group">
+												<label class="authorization__form-label sprite-smith" for="login-password"><span class="authorization__caret"></span><span class="icon-key"></span></label>
+												<div class="authorization__form-extractor">
+													<input class="authorization__form-control" id="login-password" type="password" placeholder="*********" minlength="5" required>
+												</div>
+											</div>
+											<div class="authorization__form-group authorization__form-group--forget"><a class="authorization__forget-link" href="javascript: void(0);">Forgot your password?</a></div>
+											<div class="authorization__form-group authorization__form-group--actions">
+												<div class="authorization__form-group authorization__form-group--remember">
+													<div class="swiper authorization__swiper">
+														<input class="swiper__checkbox" id="login-remember" type="checkbox" checked>
+														<label class="swiper__pre sprite-smith" for="login-remember"><span class="icon-tick swiper__pre-icon swiper__pre-icon--tick"></span><span class="icon-cross swiper__pre-icon swiper__pre-icon--cross"></span></label>
+														<label class="swiper__toggler" for="login-remember"><span class="swiper__dog"></span></label>
+														<label class="swiper__post" for="login-remember">Remember?</label>
+													</div>
+												</div>
+												<div class="authorization__form-group authorization__form-group--submit">
+													<button class="authorization__submit" id="login-submit" type="submit">Sign In</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="authorization__abroad"><span>Not a registered user yet?</span><a href="#">Sign up now!</a></div>
+								</div>
+								<button class="modal__close" type="button"><span class="modal__close-icon custom-font-close"></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+
+	/*!BANNERSTART                                                                 
+	|==============================================================================
+	| Информация о дистрибутиве : technopark.login.test                                  
+	|==============================================================================
+	|                                                                              
+	| Версия:         1.0.0                                           
+	| Лицензия:       ISC                                           
+	| Описание:       Выполненное тестовое задания от компании Технопарк                                       
+	| Файл изменен:   Tue Jun 18 2019 17:07:10 GMT+0300 (MSK)                                                 
+	|                                                                              
+	|------------------------------------------------------------------------------
+	|                                                                              
+	| Автор:    Андрей Дьяченко (HTML / Front-end разработчик)                                             
+	| Локация:  Россия, Москва                                         
+	| Phone:    +7 (915) 251-96-66                                            
+	| Email:    north.inhale@gmail.com                                            
+	| Telegram: +7 (915) 251-96-66                                         
+	| Skype:    tux_will                                            
+	|                                                                              
+	|==============================================================================
+	BANNEREND*/
+
+[class$=__form-control]:invalid {
+	border-color: #d08181;
+	outline-color: #d08181;
+	-webkit-box-shadow: 0 0 3px rgba(208, 129, 129, 0.4);
+	   -moz-box-shadow: 0 0 3px rgba(208, 129, 129, 0.4);
+	        box-shadow: 0 0 3px rgba(208, 129, 129, 0.4);
+}
+
+[class$=__form-control]:valid {
+	border-color: #93c273;
+	outline-color: #93c273;
+	-webkit-box-shadow: 0 0 3px rgba(147, 194, 115, 0.4);
+	   -moz-box-shadow: 0 0 3px rgba(147, 194, 115, 0.4);
+	        box-shadow: 0 0 3px rgba(147, 194, 115, 0.4);
+}
+
+.authorization__form:invalid .authorization__submit {
+	pointer-events: none;
+	background-color: #ccc;
+	border-color: #ccc;
+	border-bottom-color: #b8b8b8;
+}
+
+/*# sourceMappingURL=noscript.css.map */
