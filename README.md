@@ -6,15 +6,15 @@
 ## Установка
 
 ### Клонирование проекта
-Что бы склонировать проект на свой компьютер - откройте терминал сочетанием клавиш `Ctrl + T` - *(Для Ubuntu Linux)*
+Что бы склонировать проект на свой компьютер - откройте терминал сочетанием клавиш `Ctrl + T` - *(На примере Ubuntu Linux)*
 
 Перейдите в рабочий каталог. Например: **/var/www/** или **С:\\www\\** если вы пользуетесь ОС Windows
 ```bash
-$ cd /var/www/
+cd /var/www/
 ```
 Склонируйте проект, введя в терминал команду
 ```bash
-$ git clone git@github.com:Andrew-Dyachenko/technopark.login.test.git
+git clone git@github.com:Andrew-Dyachenko/technopark.login.test.git
 ```
 или с помощью
 ```bash
@@ -25,7 +25,7 @@ git clone https://github.com/Andrew-Dyachenko/technopark.login.test.git
 ### Развертка проекта
 Перейдите в главную папку склонированного проекта
 ```bash
-$ cd /var/www/technopark.login.test/
+cd /var/www/technopark.login.test/
 ```
 Находясь в директории проекта - разверните необходимые зависимости
 ```bash
