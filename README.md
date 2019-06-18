@@ -1,7 +1,7 @@
 # Выполненое тестовое задание от компании Технопарк
 
 ## Превью
-![Technopark login preview](/dist/images/preview.png)
+![Technopark login preview](/preview.png)
 
 ## Установка
 
