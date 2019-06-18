@@ -5,6 +5,7 @@
   "revisit": "1.4 days",
   "main": "index.js",
   "scripts": {
+    "start": "gulp fast",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
